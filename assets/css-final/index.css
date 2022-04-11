@@ -287,7 +287,7 @@ main #newsletter button {
   border: 1px solid #000;
   padding: 10px 10px;
   border-radius: 7px;
-  background-color: #000;
+  background-color: #FFF;
   letter-spacing: 1.5px;
   line-height: 1.5;
   cursor: pointer;
@@ -295,6 +295,15 @@ main #newsletter button {
 
 main #newsletter button a {
   font-family: "Anek-Bold";
+  color: #000;
+}
+
+main #newsletter button:hover {
+  background-color: #000;
+  transition: 0.2s;
+}
+
+main #newsletter button a:hover {
   color: #FFF;
 }
 
