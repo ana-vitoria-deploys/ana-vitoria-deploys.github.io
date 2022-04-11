@@ -57,6 +57,7 @@ main header > div#logo-site .logo-button {
     display: flex;
     align-items: center;
     align-self: center;
+    cursor: pointer;
 }
 main header > div#logo-site p.show-tablet-desktop {
     font-size: 1.5em;
@@ -70,19 +71,21 @@ main header > div#menu button {
     border-radius: 6px;
     color: #FFF;
     background-color: unset;
-
+    cursor: pointer;
 }
 main header > div#shopping-bag button.show-all {
     border: 0px solid #FFFFFF30;
     border-radius: 6px;
     color: #FFF;
     background-color: unset;
+    cursor: pointer;
 }
 main header >div#search button.show-desktop {
     border: 0px solid #FFFFFF30;
     border-radius: 6px;
     color: #FFF;
     background-color: unset;
+    cursor: pointer;
 }
 main header .show-desktop {
     width: 100%;
@@ -139,6 +142,7 @@ main #hero div.brand-head h2 {
     margin: 4px auto;
     line-height: 1.5;
     font-family: "Anek-Regular";
+    cursor: pointer;
 }
 main #hero div.brand-head h3 {
     box-sizing: border-box;
@@ -160,6 +164,7 @@ main #hero div.brand-media > picture.photo-hour {
     min-width: 320px;
     width: auto;
     height: auto;
+    cursor: pointer;
 }
 main #hero div.links {
     width: 100%;
@@ -174,11 +179,12 @@ main #hero div.links > a.more-infos {
     display: flex;
     text-decoration: none;
     margin-left: -1px;
-    color: #06C;
+    color: #005ab5;
     letter-spacing: inherit;
     font-size: 19px;
     line-height: 1.23;
     text-align: center;
+    cursor: pointer;
 }
 main #hero div.links > a.more-infos::after {
     content: ">";
@@ -196,11 +202,12 @@ main #hero div.links > a.buy {
     display: flex;
     text-decoration: none;
     margin-left: 17px;
-    color: #06C;
+    color: #005ab5;
     letter-spacing: inherit;
     font-size: 19px;
     line-height: 1.23;
     text-align: center;
+    cursor: pointer;
 }
 main #hero div.links > a.buy::after {
     content: ">";
@@ -221,13 +228,67 @@ main #hero div.brand-item-se div.brand-head {
     padding-top: 20px;
 }
 main #hero div.brand-item-se div.brand-media {
-    margin-top: 25px;
+    margin: 25px auto;
+    max-width: 300px;
+    max-height: 400px;
+    min-height: 400px; 
+    min-width: 300px;
+    cursor: pointer;
+}
+main #newsletter {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 10px auto;
+    font-family: "Anek-Bold";
+}
+main #newsletter > svg {
+    width: 70px;
+    height: 70px;
+}
+main #newsletter p {
+    padding: 0 30px 15px;
+}
+main #newsletter button {
+    margin-bottom: 4px;
+    border: 1px solid #000;
+    padding: 10px 10px;
+    border-radius: 7px;
+    background-color: #000;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+main #newsletter button a {
+    font-family: "Anek-Bold";
+    color: #FFF;
 }
 main footer {
     background-color: #F5F5F7;
-    padding: 80px 23px 35px 23px;
+    padding: 23px 23px 35px 23px;
     display: flex;
     flex-direction: column;
+}
+main footer div.ecommerce-footer ul {
+    font-family: "Anek-Regular";
+    padding: 16px 0;
+    margin: 0 16px;
+    display: block;
+}
+main footer div.ecommerce-footer ul li {
+    padding: 0;
+    margin: 0;
+}
+main footer div.ecommerce-footer ul li div.description {
+    font-family: "Anek-Light";
+}
+main footer div.ecommerce-footer ul li:nth-child(1),
+main footer div.ecommerce-footer ul li:nth-child(2),
+main footer div.ecommerce-footer ul li:nth-child(3) {
+    margin-bottom: 10px;
+    margin-right: 0;
 }
 main footer #footer-menu {
     display: flex;
@@ -242,15 +303,18 @@ main footer > #footer-menu > h2 {
     font-family: "Anek-Light";
     font-weight: normal;
     padding: 0 15px;
-    margin: 4px 0;
+    margin: 10px 0 0;
 }
 main footer > #footer-menu > .menu > ul {
     padding-left: 0;
 }
 main footer > #footer-menu > .menu > ul > li {
-    margin-top: 20px;
     font-family: "Anek-Light";
     font-weight: lighter;
+    cursor: pointer;
+}
+main footer > #footer-menu > .menu > ul > li + li {
+    margin-top: 20px;
 }
 main footer > #footer-menu > .menu {
     padding: 0 0 50px 0;
@@ -266,6 +330,7 @@ main footer > #footer-menu > .social-media .item {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 main footer > #footer-menu > .social-media .item + .item {
     margin-left: 10px;
@@ -289,6 +354,9 @@ main footer #copyright > div {
     justify-content: space-between;
     font-family: "Anek-Light";
     font-size: 1em;
+}
+main footer #copyright > div a {
+    cursor: pointer;
 }
 main .show-mobile {
     display: block;
@@ -325,6 +393,45 @@ main header div#search {
     }
     main header div#search {
         display: none;
+    }
+
+    @keyframes fadeLeftAnimation {
+        from {
+            transform: translateY(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    .fadeLeft {
+        transition-duration: 1s;
+        animation-name: fadeLeftAnimation;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+    }
+    main #newsletter {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+        margin: 10px 20px;
+    }
+    main #newsletter p {
+        padding: 0;
+        flex-direction: column;
+    }
+    main footer div.ecommerce-footer > ul {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+    main footer > #footer-menu > .menu > ul > li {
+        margin-top: 20px;
     }
 }
 
@@ -372,11 +479,11 @@ main header div#search {
     }
     main #hero div.brand-item-se {
         width: 100%;
+        display: flex;
         box-sizing: border-box;
         align-items: center;
         justify-content: space-evenly;
         background-color: #F9DCBF;
-        display: flex;
         position: relative;
     }
     main #hero div.head-group {
@@ -388,11 +495,26 @@ main header div#search {
     main #hero div.brand-item-se div.brand-head {
         display: block;
     }
+    main #hero div.brand-item-se div.brand-media {
+        margin: 0;
+    }
     main footer > #footer-menu {
         width: 100%;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-around;
+    }
+    main footer > #footer-menu > h2 {
+        font-family: "Anek-Light";
+        font-weight: normal;
+        padding: 0 15px;
+        margin: 16px 0 0;
+    }
+    main footer > #footer-menu > .menu {
+        padding: 0;
+    }
+    main footer > #footer-menu > .social-media {
+        margin: 20px 0 0;
     }
     main footer #copyright {
         flex-direction: row;
@@ -455,5 +577,10 @@ main header div#search {
     main #hero > div {
         display: block;
         width: 100%;
+    }
+    main #newsletter {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
 }
